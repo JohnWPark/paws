@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Pet name</th>
       <th>Description</th>
       <th>Care instructions</th>
@@ -16,6 +17,7 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
+        <td><%= image_tag request.image.url(:medium) %></td>
         <td><%= request.pet_name %></td>
         <td><%= request.description %></td>
         <td><%= request.care_instructions %></td>

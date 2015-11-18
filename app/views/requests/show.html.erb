@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @request.image.url(:medium) %>
+
 <p>
   <strong>Pet name:</strong>
   <%= @request.pet_name %>
