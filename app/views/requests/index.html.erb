@@ -20,9 +20,9 @@
         <td><%= request.description %></td>
         <td><%= request.care_instructions %></td>
         <td><%= request.range %></td>
-        <td><%= link_to 'Show', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', request, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>
+<%= link_to 'New Request', new_request_path, class: "btn btn-link" %>

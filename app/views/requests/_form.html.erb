@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :pet_name %><br>
-    <%= f.text_field :pet_name %>
+    <%= f.text_field :pet_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :care_instructions %><br>
-    <%= f.text_area :care_instructions %>
+    <%= f.text_area :care_instructions, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :range %><br>
-    <%= f.date_select :range %>
+    <%= f.date_select :range, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
