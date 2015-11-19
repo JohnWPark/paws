@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.0'
 # added bootstrap-sass gem
 gem 'bootstrap-sass', '~> 3.3.5'
 # added paperclip gem
-gem "paperclip", "~> 4.3"
+gem "paperclip", "~> 4.3" #what does this gem do?
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 

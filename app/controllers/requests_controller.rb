@@ -64,7 +64,7 @@ class RequestsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_request
-      @request = Request.find(params[:id])
+      @request = Request.find(params[:id]) # This is awesome how you cleaned up the controller, also nice commenting!
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
