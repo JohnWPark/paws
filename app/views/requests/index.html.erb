@@ -1,35 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Requests</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Pet name</th>
-      <th>Description</th>
-      <th>Care instructions</th>
-      <th>Range</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @requests.each do |request| %>
-      <tr>
-        <td><%= image_tag request.image.url(:medium) %></td>
-        <td><%= request.pet_name %></td>
-        <td><%= request.description %></td>
-        <td><%= request.care_instructions %></td>
-        <td><%= request.range %></td>
-        <td><%= link_to 'Show', request, class: "btn btn-link" %></td>
-        <td><%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %></td>
-        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="row">
+  <% @requests.each do |request| %>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <%= image_tag request.image.url() %>
+          <div class="caption">
+            <h3><%= request.pet_name %></h3>
+            <%= link_to 'Show', request, class: "btn btn-link" %>
+            <%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %>
+            <%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to 'New Request', new_request_path, class: "btn btn-link" %>
