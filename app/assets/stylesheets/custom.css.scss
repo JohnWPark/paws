@@ -1,12 +1,36 @@
 @import "bootstrap";
 
+body {
+  background-color: #f2f7f9;
+  color: #333333;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
 .navbar-default {
-  background-color: #F0EAD6;
+  background-color: #EFEFEB;
 }
 
 .navbar-default .navbar-brand {
-  font-family: guardian-egyptt, georgia, serif;
-  font-weight: 400;
-  color: #02caeb;
-  font-size: 30px;
+  font-family:  Futura, georgia, serif;
+  font-weight: 800;
+  color: #02CAEB;
+  font-size: 35px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0192B5;
+}
+
+.center {
+  text-align: center;
+
+}
+
+.col-md-6 {
+  h3 {font-size: 40px;}
+  h5 {font-size: 25px;}
+  p {font-size: 15px;}
 }
