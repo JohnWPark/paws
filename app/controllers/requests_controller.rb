@@ -1,5 +1,7 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
 
   # GET /requests
   # GET /requests.json
@@ -72,4 +74,11 @@ class RequestsController < ApplicationController
     def request_params
       params.require(:request).permit(:pet_name, :description, :care_instructions, :range, :image)
     end
+
+    # Method defined to return user to homepage if user is not creator of request.
+    def check_user
+      if current_user != @request.user
+        redirect_to root_url, alert: "Paws off! This request is not yours."
+    end
+  end
 end

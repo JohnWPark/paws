@@ -1,7 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <div class="center">
-  <button type="button" class="btn btn-default"><%= link_to 'New Request', new_request_path, class: "btn btn-link" %></button>
+  <!-- Only a signed in user will be able to see the New Request link -->
+  <% if user_signed_in? %>
+    <button type="button" class="btn btn-default"><%= link_to 'New Request', new_request_path, class: "btn btn-link" %></button>
+  <% end %>
   <div class="row">
     <% @requests.each do |request| %>
       <div class="col-md-3">
@@ -11,12 +14,14 @@
               <h3><%= request.pet_name %></h3>
               <p><%="Owner: #{request.user.name}" %></p>
                 <%= link_to 'Show', request, class: "btn btn-link" %>
-                <%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %>
-                <%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+                <!-- If the user is already signed in, and the current user is the same as the user that created the request, the user can see the Edit and Destroy links -->
+                <% if (user_signed_in?) && (current_user == request.user) %>
+                  <%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %>
+                  <%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+                <% end %>
             </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-<%= link_to 'New Request', new_request_path, class: "btn btn-link" %>
