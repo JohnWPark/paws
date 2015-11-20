@@ -9,7 +9,7 @@
           <%= image_tag request.image.url %>
             <div class="caption">
               <h3><%= request.pet_name %></h3>
-              
+              <p><%="Owner: #{request.user.name}" %></p>
                 <%= link_to 'Show', request, class: "btn btn-link" %>
                 <%= link_to 'Edit', edit_request_path(request), class: "btn btn-link" %>
                 <%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
