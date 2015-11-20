@@ -5,4 +5,6 @@ class Request < ActiveRecord::Base
   # Validates form fields are present
   validates :pet_name, :description, :care_instructions, presence: true
   validates_attachment_presence :image
+
+  belongs_to :user
 end

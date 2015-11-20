@@ -25,7 +25,7 @@ class RequestsController < ApplicationController
   # POST /requests.json
   def create
     @request = Request.new(request_params)
-
+    @request.user_id = current_user.id # Devise keyword: user_id. Set user_id field for this request to be equal to the id of the current user
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
