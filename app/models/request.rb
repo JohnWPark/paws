@@ -8,3 +8,5 @@ class Request < ActiveRecord::Base
 
   belongs_to :user
 end
+
+# models looks great, like your validations. Also cool seeing all the carrier wave stuff.

@@ -3,3 +3,5 @@ class AddUserIdToRequests < ActiveRecord::Migration
     add_column :requests, :user_id, :integer
   end
 end
+
+# I like that you added additional columns using additional migrations instead of editing existing ones.
