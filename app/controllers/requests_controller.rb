@@ -3,6 +3,7 @@ class RequestsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
 
+## controller looks somewhat scaffolded .... do you know everything that scaffolding does?
   # GET /requests
   # GET /requests.json
   def index
@@ -26,6 +27,7 @@ class RequestsController < ApplicationController
   # POST /requests
   # POST /requests.json
   def create
+    # could also do @request = current_user.requests.build(request_params)
     @request = Request.new(request_params)
     # Devise keyword: user_id. Set user_id field for this request to be equal to the id of the current user
     @request.user_id = current_user.id
@@ -76,6 +78,7 @@ class RequestsController < ApplicationController
     end
 
     # Method defined to return user to homepage if user is not creator of request.
+    ## nice i like this method
     def check_user
       if current_user != @request.user
         redirect_to root_url, alert: "Paws off! This request is not yours."

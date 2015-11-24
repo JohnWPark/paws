@@ -4,7 +4,7 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+<!-- nice job adding custom attributes to your devise model and generating views to add a name field -->
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, autofocus: true, class: "form-control" %>

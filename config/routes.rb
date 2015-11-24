@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :requests
+  # thats cool, i didn't know you could do what you did below and it automatically
+  # maps to corresponding controller and action.
   get 'pages/about'
 
   get 'pages/contact'
