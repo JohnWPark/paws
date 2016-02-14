@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 # added paperclip gem
 gem "paperclip", "~> 4.3"
+gem "paperclip-dropbox", ">= 1.1.7"
+gem "figaro"
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
