@@ -7,7 +7,7 @@
     <% @requests.each do |request| %>
       <div class="col-md-3">
         <div class="thumbnail">
-          <%= image_tag request.image.url %>
+          
             <div class="caption">
               <h3><%= request.pet_name %></h3>
               <p><%="Owner: #{request.user.name}" %></p>
