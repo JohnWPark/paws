@@ -7,10 +7,11 @@
     <% @requests.each do |request| %>
       <div class="col-md-3">
         <div class="thumbnail">
-          
+          <%= image_tag request.image.url %>
             <div class="caption">
               <h3><%= request.pet_name %></h3>
-              <p><%="Owner: #{request.user.name}" %></p>
+              <p><%="Owner: #{request.user}" %></p>
+              <p><%="Price: #{request.price}" %></p>
                 <%= link_to 'Show', request, class: "btn btn-link" %>
                 <!-- If the user is already signed in, and the current user is the same as the user that created the request, the user can see the Edit and Destroy links -->
                 <% if (user_signed_in?) && (current_user == request.user) %>

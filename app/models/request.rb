@@ -14,7 +14,8 @@ class Request < ActiveRecord::Base
 
 
   # Validates form fields are present
-  validates :pet_name, :description, :care_instructions, presence: true
+  validates :pet_name, :description, :care_instructions, :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
   validates_attachment_presence :image
 
   belongs_to :user
