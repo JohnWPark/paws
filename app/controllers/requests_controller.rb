@@ -72,7 +72,7 @@ class RequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
-      params.require(:request).permit(:pet_name, :description, :care_instructions, :range, :image)
+      params.require(:request).permit(:pet_name, :description, :care_instructions, :price, :range, :image)
     end
 
     # Method defined to return user to homepage if user is not creator of request.
