@@ -6,13 +6,13 @@
   </div>
   <div class="col-md-6">
     <h3><%= @request.pet_name %></h3>
-    <p><strong>Price: </strong><%= @request.price %></p>
+    <p><strong>Price: </strong><%= number_to_currency(@request.price) %></p>
     <p><strong>Description: </strong><%= @request.description %></p>
     <p><strong>Care instructions: </strong><%= @request.care_instructions %></p>
-    <p><strong>Price: </strong><%= @request.price %></p>
     <p><strong>Range: </strong><%= @request.range %></p>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_request_path(@request), class: "btn btn-link" %> |
+<% if current_user == @request.user %>
+  <%= link_to 'Edit', edit_request_path(@request), class: "btn btn-link" %> |
+<% end %>
 <%= link_to 'Back', requests_path, class: "btn btn-link" %>

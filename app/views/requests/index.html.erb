@@ -7,7 +7,8 @@
     <% @requests.each do |request| %>
       <div class="col-md-3">
         <div class="thumbnail">
-          <%= image_tag request.image.url %>
+          <!-- Makes the image a link to the show page -->
+          <%= link_to image_tag(request.image.url), request %>
             <div class="caption">
               <h3><%= request.pet_name %></h3>
               <p><%= number_to_currency(request.price) %></p>
