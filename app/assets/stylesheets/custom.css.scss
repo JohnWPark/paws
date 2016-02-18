@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-default .navbar-brand {
-  font-family:  Futura, georgia, serif;
+  font-family:  futura, georgia, serif;
   font-weight: 800;
   color: #02CAEB;
   font-size: 35px;
@@ -37,4 +37,15 @@ body {
 
 .col-md-3:nth-child(4n+1) {
   clear: left;
+}
+
+.jumbotron {
+  background-size: 100% 100%;
+  background-image: url('cat-and-dog.jpg');
+  opacity: 0.7;
+  border: 1px solid black;
+}
+
+.jumbo-text {
+ font-family: futura, georgia, serif;
 }
