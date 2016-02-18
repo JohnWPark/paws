@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :requests
+
   get 'pages/about'
 
   get 'pages/contact'
+
+  get 'seller' => "requests#seller"
 
   root 'requests#index'
 
