@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="jumbotron-pic">
     <div class="jumbo-text">
-      <h1>Home away from home</h1>
+      <h1>In good hands</h1>
       <h2>We love your pets as much as you do</h2>
     </div>
   </div>
@@ -10,8 +10,16 @@
 <div class="center">
   <!-- Only a signed in user will be able to see the New Request link -->
   <% if user_signed_in? %>
-    <button type="button" class="btn btn-default"><%= link_to 'New Request', new_request_path, class: "btn btn-link" %></button>
+    <button type="button" class="btn btn-default"><%= link_to 'Request Sitter', new_request_path, class: "btn btn-link" %></button>
   <% end %>
+
+
+<div id="sitter">
+  <h3><strong>Do something good today. Be a Sitter.</strong></h3>
+</div>
+
+<br>
+
   <div class="row">
     <% @requests.each do |request| %>
       <div class="col-md-3">
@@ -20,7 +28,7 @@
           <%= link_to image_tag(request.image.url), request %>
             <div class="caption">
               <h3><%= request.pet_name %></h3>
-              <p><%= number_to_currency(request.price) %></p>
+              <p><%= number_to_currency(request.price) %> / day</p>
               <p><%= "Owner: #{request.user.name}" %></p>
             </div>
         </div>
