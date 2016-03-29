@@ -1,27 +1,25 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Paws is a crowdsourced web app that allows pet owners to find other experienced pet owners to pet-sit their four-legged friends while they are out of town, or otherwise unable to.
+
+It is created in Ruby on Rails, styled with Bootstrap, and deployed on Heroku.
 
 Things you may want to cover:
 
 * Ruby version
+  2.2.3 
+  
+* Rails version
+  4.2.4
+  
+* Future Plans
+   - massive styling overhaul
+   - social login/auth
+   - notifications mobile/web
+   - payment api
+   - Google maps api
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
