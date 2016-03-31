@@ -4,8 +4,6 @@ Paws is a crowdsourced web app that allows pet owners to find other experienced 
 
 It is created in Ruby on Rails, styled with Bootstrap, and deployed on Heroku.
 
-Things you may want to cover:
-
 * Ruby version
   2.2.3 
   
